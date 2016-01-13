@@ -1,0 +1,132 @@
+@import './font.less';
+@import './mixins.less';
+
+body {
+  margin: 0;
+  font-family: 'primary-font', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.app-title {
+  .flex-center();
+  color: white;
+  font-size: 65px;
+  font-family: 'header-font', 'Helvetica', 'Arial', 'sans-serif';
+  width: 300px;
+  margin: 0 auto;
+}
+.clearfix {
+  overflow: auto;
+}
+.splash {
+  color: @off-white;
+}
+.header {
+  font-size: 26px;
+}
+.sub-header {
+  text-align: center;
+  font-size: 18px;
+}
+.phone {
+  .phone-container {
+    height: 100%;
+    width: 270px;
+    margin: 0 auto;
+    background-color: @off-black;
+  }
+}
+.section {
+  background-color: white;
+  height: 200px;
+  position: relative;
+  padding: 20px 0;
+  color: @off-black;
+}
+.section.downloads {
+  height: auto;
+}
+.download-button {
+  width: 30%;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 0 10px;
+}
+
+.qelfvin-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 17vh;
+  width: 40vw;
+  background-color: @off-black;
+}
+@media screen and (min-width : 320px) {
+  .app-title, .header, .sub-header {
+    width: 325px;
+    margin: 0 auto;
+    .flex-center();
+  }
+  .splash {
+    height: 85vh;
+    .phone {
+      margin-top: 17vh;
+      height: calc(85vh - 34vh);
+    }
+    .sub-container.title {
+      height: calc(17vh - 50px);
+      margin-top: 50px;
+    }
+  }
+  .section-text {
+    margin-top: 10px;
+  }
+  .section-image {
+    width: 270px;
+    margin: 0 auto;
+    height: 20vh;
+    background-color: @off-black;
+  }
+  .footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    .x-margin {
+      margin: 0 5px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*Default Ipad Screen*/
+@media screen and (min-width: 768px) {
+  .sub-container {
+    display: inline-block;
+  }
+  .phone {
+    float: left;
+  }
+}
+
+.splash {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947dd5+0,5839ae+98 */
+  background: rgb(148,125,213); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(148,125,213,1) 0%, rgba(88,57,174,1) 98%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(148,125,213,1) 0%,rgba(88,57,174,1) 98%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(148,125,213,1) 0%,rgba(88,57,174,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947dd5', endColorstr='#5839ae',GradientType=0 ); /* IE6-9 */
+}
+
+.footer {
+  background: rgb(148,125,213); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(88,57,174,1) 0%,rgba(148,125,213,1) 98%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(88,57,174,1) 0%,rgba(148,125,213,1) 98%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(88,57,174,1) 0%,rgba(148,125,213,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5839ae', endColorstr='#947dd5',GradientType=0 ); /* IE6-9 */
+}
