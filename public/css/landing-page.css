@@ -190,3 +190,88 @@ div.header {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5839ae', endColorstr='#947dd5', GradientType=0);
   /* IE6-9 */
 }
+
+.section.vote {
+  display: flex;
+  flex: 1;
+  padding: 0;
+  height: 80vh;
+}
+
+.layer-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+}
+
+.vote-divider {
+  flex: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../img/output--voting-divider.svg');
+}
+
+.grid {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.grid > .cell {
+  flex: 1;
+  margin: 0;
+}
+
+.grid > .cell.fourth {
+  flex: 0 0 35%;
+}
+
+.cell.large-height {
+  flex: 0 0 60vh;
+}
+
+.grid.vertical {
+  -webkit-flex-direction: row;
+  flex-direction: column;
+}
+
+.grid > .cell.half {
+}
+
+.grid.justify-center {
+  justify-content: center;
+}
+
+.grid.justify-apart {
+  justify-content: space-between;
+}
+
+.svg--qelfin-beard {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../img/output--qelf-beard.svg');
+}
+
+.square {
+  content: '';
+  padding-bottom: 100%;
+}
+
+@media screen and (min-width: 38em) {
+  .cell.large-screen.half {
+    flex: 0 0 80%;
+  }
+}
