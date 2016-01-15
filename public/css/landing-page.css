@@ -12,6 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -webkit-flex;
 }
 .flex-column {
   flex-direction: column;
@@ -34,6 +37,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -webkit-flex;
   color: white;
   font-size: 58px;
   font-family: 'header-font', 'Helvetica', 'Arial', 'sans-serif';
@@ -117,6 +123,9 @@ div.header {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    display: -webkit-flex;
   }
   .splash {
     height: 90vh;
