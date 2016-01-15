@@ -30,9 +30,14 @@ body {
 .phone {
   .phone-container {
     height: 100%;
-    width: 270px;
+    width: 100%;
+    //width: 250px;
     margin: 0 auto;
-    background-color: @off-black;
+    background-color: transparent;
+    .phone-svg {
+      .background-image();
+      background-image: url('../img/iphone.svg');
+    }
   }
 }
 .section {
@@ -53,13 +58,21 @@ body {
   margin: 0 10px;
 }
 
-.qelfvin-top {
+.qelfin-top {
   position: absolute;
   top: 0;
   right: 0;
-  height: 17vh;
-  width: 40vw;
-  background-color: @off-black;
+  height: 21vh;
+  width: 48vw;
+  background-color: transparent;
+  .qelfin-svg {
+    .background-image();
+    .rotate(@rotation: 184deg);
+    background-image: url('../img/qelfin-top.svg');
+    position: relative;
+    left: 5vh;
+    top: -5vh;
+  }
 }
 @media screen and (min-width : 320px) {
   .app-title, .header, .sub-header {
@@ -70,8 +83,9 @@ body {
   .splash {
     height: 85vh;
     .phone {
-      margin-top: 17vh;
       height: calc(85vh - 34vh);
+      width: calc(85vh / 1.2 - 34vh / 1.2);
+      margin: 17vh auto 0 auto;
     }
     .sub-container.title {
       height: calc(17vh - 50px);

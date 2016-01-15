@@ -12,3 +12,15 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.rotate(@rotation: 0px) {
+  -ms-transform: rotate(@rotation);
+  -webkit-transform: rotate(@rotation);
+  transform: rotate(@rotation);
+}
