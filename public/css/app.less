@@ -65,6 +65,8 @@ body {
   height: 21vh;
   width: 48vw;
   background-color: transparent;
+  overflow: hidden;
+
   .qelfin-svg {
     .background-image();
     .rotate(@rotation: 184deg);
@@ -76,19 +78,22 @@ body {
 }
 @media screen and (min-width : 320px) {
   .app-title, .header, .sub-header {
-    width: 325px;
+    width: 320px;
     margin: 0 auto;
     .flex-center();
   }
   .splash {
-    height: 85vh;
+    @splash-height: 90vh;
+    @title-height: 17vh;
+    @title-phone-gap: 20vh;
+    height: @splash-height;
     .phone {
-      height: calc(85vh - 34vh);
-      width: calc(85vh / 1.2 - 34vh / 1.2);
-      margin: 17vh auto 0 auto;
+      height: calc(@splash-height - @title-height - @title-phone-gap);
+      width: calc(@splash-height / 1.15 - @title-height / 1.15 - @title-phone-gap / 1.15);
+      margin: @title-phone-gap auto 0 auto;
     }
     .sub-container.title {
-      height: calc(17vh - 50px);
+      height: calc(@title-height - 50px);
       margin-top: 50px;
     }
   }

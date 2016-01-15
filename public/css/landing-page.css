@@ -91,6 +91,7 @@ body {
   height: 21vh;
   width: 48vw;
   background-color: transparent;
+  overflow: hidden;
 }
 .qelfin-top .qelfin-svg {
   width: 100%;
@@ -110,19 +111,19 @@ body {
   .app-title,
   .header,
   .sub-header {
-    width: 325px;
+    width: 320px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .splash {
-    height: 85vh;
+    height: 90vh;
   }
   .splash .phone {
-    height: calc(85vh - 34vh);
-    width: calc(85vh / 1.2 - 34vh / 1.2);
-    margin: 17vh auto 0 auto;
+    height: calc(90vh - 17vh - 20vh);
+    width: calc(90vh / 1.15 - 17vh / 1.15 - 20vh / 1.15);
+    margin: 20vh auto 0 auto;
   }
   .splash .sub-container.title {
     height: calc(17vh - 50px);
