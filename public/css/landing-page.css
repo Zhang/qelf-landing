@@ -233,8 +233,8 @@ div.header {
   margin: 0;
 }
 
-.grid > .cell.fourth {
-  flex: 0 0 35%;
+.grid > .cell.third {
+  flex: 0 0 33.33333%;
 }
 
 .cell.large-height {
@@ -258,6 +258,7 @@ div.header {
 }
 
 .svg--qelfin-beard {
+  margin-right: 0.3em;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
@@ -265,13 +266,50 @@ div.header {
   background-image: url('../img/output--qelf-beard.svg');
 }
 
+.svg--qelfin-girl {
+  margin-left: 0.3em;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../img/output--qelf-girl.svg');
+}
+
+.cell.svg--output-stats {
+  flex: 0 0 60vh;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../img/output--stats.svg');
+  box-shadow: 0 20px rgab(0,0,0,0.8);
+}
+
 .square {
-  content: '';
   padding-bottom: 100%;
+}
+
+.grid > .shadow {
+  display: flex;
+  flex: 0 1 auto;
+  height: auto;
+  background-color: rgba(0,0,0,0.1);
+  margin: 0 0.8em;
+  border-radius: 100%
+}
+
+.grid > .shadow:before {
+  content: '';
+  float: left;
+  padding-top: 25%;
 }
 
 @media screen and (min-width: 38em) {
   .cell.large-screen.half {
-    flex: 0 0 80%;
+    flex: 0 70%;
+  }
+
+  .grid > .cell.large-screen--quarter {
+    flex: 0 0 25%;
   }
 }
