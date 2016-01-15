@@ -35,7 +35,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 65px;
+  font-size: 58px;
   font-family: 'header-font', 'Helvetica', 'Arial', 'sans-serif';
   width: 300px;
   margin: 0 auto;
@@ -46,12 +46,13 @@ body {
 .splash {
   color: #D4D4D4;
 }
-.header {
-  font-size: 26px;
+div.header {
+  margin-top: 10px;
+  font-size: 22px;
 }
 .sub-header {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 .phone .phone-container {
   height: 100%;
@@ -121,13 +122,13 @@ body {
     height: 90vh;
   }
   .splash .phone {
-    height: calc(90vh - 17vh - 20vh);
-    width: calc(90vh / 1.15 - 17vh / 1.15 - 20vh / 1.15);
+    height: calc(90vh - 17vh - 20vh - 10px);
+    width: calc(90vh / 1.15 - 17vh / 1.15 - 20vh / 1.15 - 10px / 1.15);
     margin: 20vh auto 0 auto;
   }
   .splash .sub-container.title {
     height: calc(17vh - 50px);
-    margin-top: 50px;
+    margin-top: 60px;
   }
   .section-text {
     margin-top: 10px;

@@ -9,7 +9,7 @@ body {
 .app-title {
   .flex-center();
   color: white;
-  font-size: 65px;
+  font-size: 58px;
   font-family: 'header-font', 'Helvetica', 'Arial', 'sans-serif';
   width: 300px;
   margin: 0 auto;
@@ -20,12 +20,13 @@ body {
 .splash {
   color: @off-white;
 }
-.header {
-  font-size: 26px;
+div.header {
+  margin-top: 10px;
+  font-size: 22px;
 }
 .sub-header {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 .phone {
   .phone-container {
@@ -87,14 +88,15 @@ body {
     @title-height: 17vh;
     @title-phone-gap: 20vh;
     height: @splash-height;
+
     .phone {
-      height: calc(@splash-height - @title-height - @title-phone-gap);
-      width: calc(@splash-height / 1.15 - @title-height / 1.15 - @title-phone-gap / 1.15);
+      height: calc(@splash-height - @title-height - @title-phone-gap - 10px);
+      width: calc(@splash-height / 1.15 - @title-height / 1.15 - @title-phone-gap / 1.15 - 10px / 1.15);
       margin: @title-phone-gap auto 0 auto;
     }
     .sub-container.title {
       height: calc(@title-height - 50px);
-      margin-top: 50px;
+      margin-top: 60px;
     }
   }
   .section-text {
