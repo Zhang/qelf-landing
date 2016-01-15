@@ -41,7 +41,7 @@ body {
   -webkit-align-items: center;
   display: -webkit-flex;
   color: white;
-  font-size: 58px;
+  font-size: 17vw;
   font-family: 'header-font', 'Helvetica', 'Arial', 'sans-serif';
   width: 300px;
   margin: 0 auto;
@@ -54,11 +54,11 @@ body {
 }
 div.header {
   margin-top: 10px;
-  font-size: 22px;
+  font-size: 7vw;
 }
 .sub-header {
   text-align: center;
-  font-size: 16px;
+  font-size: 5vw;
 }
 .phone .phone-container {
   height: 100%;
