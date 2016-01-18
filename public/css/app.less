@@ -1,8 +1,12 @@
 @import './font.less';
 @import './mixins.less';
 
+html {
+  height: 100%;
+}
 body {
   margin: 0;
+  height: 100%;
   font-family: 'primary-font', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 62.5%;
 }
@@ -43,11 +47,11 @@ div.header {
       background-image: url('../img/iphone.svg');
       .product-ss {
         //Hacky, but makes the screen shot fit exactly where the phone screen should be
-        height: 39.6vh;
-        width: 36.9vh;
+        height: 77%;
+        width: 63.5%;
         position: absolute;
-        top: 11.7vh;
-        left: 3.9vh;
+        top: 22.6%;
+        left: 18.5%;
         background-position: 50% 0;
         background-size: cover;
         background-repeat: none;
@@ -94,6 +98,10 @@ div.header {
     top: -5vh;
   }
 }
+.splash-sub {
+  height: 100%;
+  position: relative;
+}
 //@media screen and (min-width : 320px) {
   .app-title, .header, .sub-header {
     width: 320px;
@@ -101,15 +109,16 @@ div.header {
     .flex-center();
   }
   .splash {
-    @splash-height: 90vh;
-    @title-height: 17vh;
-    @title-phone-gap: 20vh;
+    @splash-height: 90%;
+    @title-height: 17%;
+    @title-phone-gap: 20%;
     height: @splash-height;
 
     .phone {
-      height: calc(@splash-height - @title-height - @title-phone-gap - 10px);
-      width: calc(@splash-height / 1.15 - @title-height / 1.15 - @title-phone-gap / 1.15 - 10px / 1.15);
-      margin: @title-phone-gap auto 0 auto;
+      height: 53%;
+      width: 70%;
+      position: absolute;
+      bottom: 0;
     }
     .sub-container.title {
       height: calc(@title-height - 50px);
@@ -174,7 +183,6 @@ div.header {
   flex: 1;
   padding: 0;
   height: 80vh;
-  .transition-height();
 }
 
 .layer-container {
@@ -213,7 +221,6 @@ div.header {
 
 .cell.large-height {
   flex: 0 0 60vh;
-  .transition-height();
 }
 
 .grid.vertical {
