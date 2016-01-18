@@ -32,6 +32,13 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+.transition-height {
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
+}
 body {
   margin: 0;
   font-family: 'primary-font', 'Helvetica', 'Arial', 'sans-serif';
@@ -80,7 +87,6 @@ div.header {
   background-image: url('../img/iphone.svg');
 }
 .phone .phone-container .phone-svg .product-ss {
-  transition: width 1s, height 1s;
   height: 39.6vh;
   width: 36.9vh;
   position: absolute;
@@ -114,7 +120,6 @@ div.header {
   right: 0;
   height: 22vh;
   width: 48vw;
-  transition: width 1s, height 1s;
   background-color: transparent;
   overflow: hidden;
 }
@@ -131,7 +136,6 @@ div.header {
   position: relative;
   left: 5vh;
   top: -5vh;
-  transition: width 1s, height 1s;
 }
 .app-title,
 .header,
@@ -165,7 +169,6 @@ div.header {
   width: 270px;
   margin: 0 auto;
   height: 20vh;
-  transition: width 1s, height 1s;
   background-color: #505050;
 }
 .footer {
@@ -215,7 +218,11 @@ div.header {
   flex: 1;
   padding: 0;
   height: 80vh;
-  transition: width 1s, height 1s;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
 }
 .layer-container {
   position: relative;
@@ -253,7 +260,11 @@ div.header {
 }
 .cell.large-height {
   flex: 0 0 60vh;
-  transition: width 1s, height 1s;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
 }
 .grid.vertical {
   -webkit-flex-direction: row;
@@ -285,7 +296,6 @@ div.header {
 }
 .cell.svg--output-stats {
   flex: 0 0 60vw;
-  transition: width 1s, height 1s;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;

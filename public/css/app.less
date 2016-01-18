@@ -43,7 +43,6 @@ div.header {
       background-image: url('../img/iphone.svg');
       .product-ss {
         //Hacky, but makes the screen shot fit exactly where the phone screen should be
-        transition: width 1s, height 1s;
         height: 39.6vh;
         width: 36.9vh;
         position: absolute;
@@ -81,7 +80,6 @@ div.header {
   right: 0;
   height: 22vh;
   width: 48vw;
-  transition: width 1s, height 1s;
   background-color: transparent;
   overflow: hidden;
 
@@ -94,7 +92,6 @@ div.header {
     position: relative;
     left: 5vh;
     top: -5vh;
-    transition: width 1s, height 1s;
   }
 }
 //@media screen and (min-width : 320px) {
@@ -127,7 +124,6 @@ div.header {
     width: 270px;
     margin: 0 auto;
     height: 20vh;
-    transition: width 1s, height 1s;
     background-color: @off-black;
   }
   .footer {
@@ -178,7 +174,7 @@ div.header {
   flex: 1;
   padding: 0;
   height: 80vh;
-  transition: width 1s, height 1s;
+  .transition-height();
 }
 
 .layer-container {
@@ -217,7 +213,7 @@ div.header {
 
 .cell.large-height {
   flex: 0 0 60vh;
-  transition: width 1s, height 1s;
+  .transition-height();
 }
 
 .grid.vertical {
@@ -251,7 +247,6 @@ div.header {
 
 .cell.svg--output-stats {
   flex: 0 0 60vw;
-  transition: width 1s, height 1s;
   position: relative;
   .background-image();
   background-image: url('../img/output--stats.svg');
