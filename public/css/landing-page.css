@@ -8,40 +8,44 @@
   src: url('../fonts/Sansation_Light.ttf');
   font-weight: 400;
 }
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
 .flex-center {
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
   -webkit-align-items: center;
-  display: -webkit-flex;
 }
 .flex-column {
-  flex-direction: column;
+  display: -webkit-flex;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
 .background-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 body {
   margin: 0;
   font-family: 'primary-font', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 62.5%;
 }
 .app-title {
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
   -webkit-align-items: center;
-  display: -webkit-flex;
   color: white;
-  font-size: 17vw;
+  font-size: 6em;
   font-family: 'header-font', 'Helvetica', 'Arial', 'sans-serif';
   width: 300px;
   margin: 0 auto;
@@ -54,11 +58,11 @@ body {
 }
 div.header {
   margin-top: 10px;
-  font-size: 7vw;
+  font-size: 3em;
 }
 .sub-header {
   text-align: center;
-  font-size: 5vw;
+  font-size: 1.7em;
 }
 .phone .phone-container {
   height: 100%;
@@ -67,12 +71,24 @@ div.header {
   background-color: transparent;
 }
 .phone .phone-container .phone-svg {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  position: relative;
+  width: 100%;
+  height: 100%;
   background-image: url('../img/iphone.svg');
+}
+.phone .phone-container .phone-svg .product-ss {
+  height: 39.6vh;
+  width: 36.7vh;
+  position: absolute;
+  top: 11.7vh;
+  left: 4vh;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: none;
+  background-image: url('../img/ss2.png');
 }
 .section {
   background-color: white;
@@ -101,72 +117,70 @@ div.header {
   overflow: hidden;
 }
 .qelfin-top .qelfin-svg {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   -ms-transform: rotate(195deg);
   -webkit-transform: rotate(195deg);
   transform: rotate(195deg);
+  width: 100%;
+  height: 100%;
   background-image: url('../img/qelfin-top.svg');
   position: relative;
   left: 5vh;
   top: -5vh;
 }
-@media screen and (min-width: 320px) {
-  .app-title,
-  .header,
-  .sub-header {
-    width: 320px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-    display: -webkit-flex;
-  }
-  .splash {
-    height: 90vh;
-  }
-  .splash .phone {
-    height: calc(90vh - 17vh - 20vh - 10px);
-    width: calc(90vh / 1.15 - 17vh / 1.15 - 20vh / 1.15 - 10px / 1.15);
-    margin: 20vh auto 0 auto;
-  }
-  .splash .sub-container.title {
-    height: calc(17vh - 50px);
-    margin-top: 60px;
-  }
-  .section-text {
-    margin-top: 10px;
-  }
-  .section-image {
-    width: 270px;
-    margin: 0 auto;
-    height: 20vh;
-    background-color: #505050;
-  }
-  .footer {
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
-  .footer .x-margin {
-    margin: 0 5px;
-  }
-  .footer a {
-    text-decoration: none;
-    color: white;
-  }
-  .footer a:hover {
-    cursor: pointer;
-  }
+.app-title,
+.header,
+.sub-header {
+  width: 320px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+}
+.splash {
+  height: 90vh;
+}
+.splash .phone {
+  height: calc(90vh - 17vh - 20vh - 10px);
+  width: calc(90vh / 1.15 - 17vh / 1.15 - 20vh / 1.15 - 10px / 1.15);
+  margin: 20vh auto 0 auto;
+}
+.splash .sub-container.title {
+  height: calc(17vh - 50px);
+  margin: 60px auto 0px auto;
+}
+.section-text {
+  margin-top: 10px;
+}
+.section-image {
+  width: 270px;
+  margin: 0 auto;
+  height: 20vh;
+  background-color: #505050;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.footer .x-margin {
+  margin: 0 5px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover {
+  cursor: pointer;
 }
 /*Default Ipad Screen*/
+/*Default Ipad Screen*/
 .splash {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947dd5+0,5839ae+98 */
   background: #947dd5;
   /* Old browsers */
   background: -moz-linear-gradient(top, #947dd5 0%, #5839ae 98%);
@@ -190,14 +204,13 @@ div.header {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5839ae', endColorstr='#947dd5', GradientType=0);
   /* IE6-9 */
 }
-
 .section.vote {
+  display: -webkit-flex;
   display: flex;
   flex: 1;
   padding: 0;
   height: 80vh;
 }
-
 .layer-container {
   position: relative;
   top: 0;
@@ -205,16 +218,15 @@ div.header {
   left: 0;
   right: 0;
 }
-
 .layer {
+  display: -webkit-flex;
+  display: flex;
   position: absolute;
   height: 100%;
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  display: flex;
 }
-
 .vote-divider {
   flex: 1;
   background-size: contain;
@@ -222,50 +234,40 @@ div.header {
   background-position: 50% 50%;
   background-image: url('../img/output--voting-divider.svg');
 }
-
 .grid {
   display: -webkit-flex;
   display: flex;
 }
-
-.grid > .cell {
+.grid .cell {
   flex: 1;
   margin: 0;
 }
-
-.grid > .cell.third {
+.grid .cell.third {
   flex: 0 0 33.33333%;
 }
-
 .cell.large-height {
   flex: 0 0 60vh;
 }
-
 .grid.vertical {
   -webkit-flex-direction: row;
   flex-direction: column;
 }
-
-.grid > .cell.half {
-}
-
 .grid.justify-center {
   justify-content: center;
 }
-
 .grid.justify-apart {
   justify-content: space-between;
 }
-
 .svg--qelfin-beard {
   margin-right: 0.3em;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
   background-image: url('../img/output--qelf-beard.svg');
 }
-
 .svg--qelfin-girl {
   margin-left: 0.3em;
   position: relative;
@@ -274,54 +276,48 @@ div.header {
   background-position: 50% 50%;
   background-image: url('../img/output--qelf-girl.svg');
 }
-
 .cell.svg--output-stats {
-  flex: 0 0 60vh;
+  flex: 0 0 60vw;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url('../img/output--stats.svg');
-  box-shadow: 0 20px rgab(0,0,0,0.8);
+  box-shadow: 0 20px rgab(0, 0, 0, 0.8);
 }
-
 .square {
   padding-bottom: 100%;
 }
-
 .grid > .shadow {
+  display: -webkit-flex;
   display: flex;
   flex: 0 1 auto;
   height: auto;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 0 0.8em;
-  border-radius: 100%
+  border-radius: 100%;
 }
-
 .grid > .shadow:after {
   content: '';
   float: left;
   padding-top: 25%;
 }
-
 .paper-texture:before {
   content: ' ';
   background-image: url('../img/paper_texture.png');
   background-size: 30%;
   display: block;
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   opacity: 0.1;
 }
-
 @media screen and (min-width: 38em) {
   .cell.large-screen.half {
     flex: 0 70%;
   }
-
   .grid > .cell.large-screen--quarter {
     flex: 0 0 25%;
   }

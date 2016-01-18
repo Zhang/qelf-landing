@@ -1,17 +1,20 @@
 @primary-color: #3E18BD;
 @off-white: #D4D4D4;
 @off-black: #505050;
-.flex-center {
+.flex {
+  display: -webkit-flex;
   display: flex;
+}
+.flex-center {
+  .flex();
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
   -webkit-align-items: center;
-  display: -webkit-flex;
 }
 .flex-column {
+  .flex();
   flex-direction: column;
-  display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -20,9 +23,7 @@
   -webkit-flex-grow: @growth;
 }
 .background-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

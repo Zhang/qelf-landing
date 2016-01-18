@@ -4,12 +4,13 @@
 body {
   margin: 0;
   font-family: 'primary-font', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 62.5%;
 }
 
 .app-title {
   .flex-center();
   color: white;
-  font-size: 17vw;
+  font-size: 6em;
   font-family: 'header-font', 'Helvetica', 'Arial', 'sans-serif';
   width: 300px;
   margin: 0 auto;
@@ -22,11 +23,11 @@ body {
 }
 div.header {
   margin-top: 10px;
-  font-size: 7vw;
+  font-size: 3em;
 }
 .sub-header {
   text-align: center;
-  font-size: 5vw;
+  font-size: 1.7em;
 }
 .phone {
   .phone-container {
@@ -36,7 +37,22 @@ div.header {
     background-color: transparent;
     .phone-svg {
       .background-image();
+      position: relative;
+      width: 100%;
+      height: 100%;
       background-image: url('../img/iphone.svg');
+      .product-ss {
+        //Hacky, but makes the screen shot fit exactly where the phone screen should be
+        height: 39.6vh;
+        width: 36.7vh;
+        position: absolute;
+        top: 11.7vh;
+        left: 4vh;
+        background-position: 50% 0;
+        background-size: cover;
+        background-repeat: none;
+        background-image: url('../img/ss2.png');
+      }
     }
   }
 }
@@ -70,13 +86,15 @@ div.header {
   .qelfin-svg {
     .background-image();
     .rotate(@rotation: 195deg);
+    width: 100%;
+    height: 100%;
     background-image: url('../img/qelfin-top.svg');
     position: relative;
     left: 5vh;
     top: -5vh;
   }
 }
-@media screen and (min-width : 320px) {
+//@media screen and (min-width : 320px) {
   .app-title, .header, .sub-header {
     width: 320px;
     margin: 0 auto;
@@ -95,7 +113,7 @@ div.header {
     }
     .sub-container.title {
       height: calc(@title-height - 50px);
-      margin-top: 60px;
+      margin: 60px auto 0px auto;
     }
   }
   .section-text {
@@ -122,7 +140,7 @@ div.header {
       }
     }
   }
-}
+//}
 
 /*Default Ipad Screen*/
 // @media screen and (min-width: 768px) {
@@ -134,19 +152,142 @@ div.header {
 //   }
 // }
 
+/*Default Ipad Screen*/
 .splash {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#947dd5+0,5839ae+98 */
-  background: rgb(148,125,213); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(148,125,213,1) 0%, rgba(88,57,174,1) 98%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(148,125,213,1) 0%,rgba(88,57,174,1) 98%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(148,125,213,1) 0%,rgba(88,57,174,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#947dd5', endColorstr='#5839ae',GradientType=0 ); /* IE6-9 */
+  background: #947dd5; /* Old browsers */
+  background: -moz-linear-gradient(top, #947dd5 0%, #5839ae 98%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #947dd5 0%, #5839ae 98%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #947dd5 0%, #5839ae 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#947dd5', endColorstr='#5839ae', GradientType=0); /* IE6-9 */
+}
+.footer {
+  background: #947dd5; /* Old browsers */
+  background: -moz-linear-gradient(top, #5839ae 0%, #947dd5 98%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #5839ae 0%, #947dd5 98%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #5839ae 0%, #947dd5 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5839ae', endColorstr='#947dd5', GradientType=0); /* IE6-9 */
 }
 
-.footer {
-  background: rgb(148,125,213); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(88,57,174,1) 0%,rgba(148,125,213,1) 98%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(88,57,174,1) 0%,rgba(148,125,213,1) 98%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(88,57,174,1) 0%,rgba(148,125,213,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5839ae', endColorstr='#947dd5',GradientType=0 ); /* IE6-9 */
+.section.vote {
+  .flex();
+  flex: 1;
+  padding: 0;
+  height: 80vh;
+}
+
+.layer-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.layer {
+  .flex();
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.vote-divider {
+  flex: 1;
+  .background-image();
+  background-image: url('../img/output--voting-divider.svg');
+}
+
+.grid {
+  .flex();
+  .cell {
+    flex: 1;
+    margin: 0;
+  }
+  .cell.third {
+    flex: 0 0 33.33333%;
+  }
+}
+
+.cell.large-height {
+  flex: 0 0 60vh;
+}
+
+.grid.vertical {
+  -webkit-flex-direction: row;
+  flex-direction: column;
+}
+
+.grid.justify-center {
+  justify-content: center;
+}
+
+.grid.justify-apart {
+  justify-content: space-between;
+}
+
+.svg--qelfin-beard {
+  margin-right: 0.3em;
+  position: relative;
+  .background-image();
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/output--qelf-beard.svg');
+}
+
+.svg--qelfin-girl {
+  margin-left: 0.3em;
+  position: relative;
+  .background-image();
+  background-image: url('../img/output--qelf-girl.svg');
+}
+
+.cell.svg--output-stats {
+  flex: 0 0 60vw;
+  position: relative;
+  .background-image();
+  background-image: url('../img/output--stats.svg');
+  box-shadow: 0 20px rgab(0,0,0,0.8);
+}
+
+.square {
+  padding-bottom: 100%;
+}
+
+.grid > .shadow {
+  .flex();
+  flex: 0 1 auto;
+  height: auto;
+  background-color: rgba(0,0,0,0.1);
+  margin: 0 0.8em;
+  border-radius: 100%
+}
+
+.grid > .shadow:after {
+  content: '';
+  float: left;
+  padding-top: 25%;
+}
+
+.paper-texture:before {
+  content: ' ';
+  background-image: url('../img/paper_texture.png');
+  background-size: 30%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+@media screen and (min-width: 38em) {
+  .cell.large-screen.half {
+    flex: 0 70%;
+  }
+
+  .grid > .cell.large-screen--quarter {
+    flex: 0 0 25%;
+  }
 }
