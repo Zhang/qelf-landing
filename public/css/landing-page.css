@@ -153,6 +153,7 @@ div.header {
 .splash .sub-container.title {
   height: calc(17vh - 50px);
   margin: 60px auto 0px auto;
+  border-bottom: 1px solid transparent;
 }
 .section-text {
   margin-top: 10px;
