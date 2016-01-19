@@ -84,7 +84,8 @@ body textarea {
   color: #D4D4D4;
 }
 div.header {
-  margin-top: 10px;
+  margin: 10px auto;
+  text-align: center;
   font-size: 3em;
 }
 .sub-header {
