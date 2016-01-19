@@ -316,6 +316,7 @@ div.header {
 }
 .cell.svg--output-stats {
   flex: 0 0 60vw;
+  -webkit-flex: 0 0 60vw;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
@@ -330,6 +331,7 @@ div.header {
   display: -webkit-flex;
   display: flex;
   flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
   height: auto;
   background-color: rgba(0, 0, 0, 0.1);
   margin: 0 0.8em;
