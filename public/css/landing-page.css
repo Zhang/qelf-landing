@@ -281,7 +281,7 @@ div.header {
   flex: 0 0 60vh;
 }
 .grid.vertical {
-  -webkit-flex-direction: row;
+  -webkit-flex-direction: column;
   flex-direction: column;
 }
 .grid.justify-center {
