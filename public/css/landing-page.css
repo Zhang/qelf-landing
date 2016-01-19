@@ -25,7 +25,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  -webkit-align-items: flex-start;
   justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+.align-center {
+  align-items: center;
+  -webkit-align-items: center;
 }
 .background-image {
   background-size: contain;
@@ -78,7 +84,6 @@ div.header {
 .phone .phone-container {
   height: 100%;
   width: 100%;
-  margin: 0 auto;
   background-color: transparent;
 }
 .phone .phone-container .phone-svg {
@@ -165,6 +170,7 @@ div.header {
   width: 70%;
   position: absolute;
   bottom: 0;
+  margin-left: calc(50% - 35%);
 }
 .splash .sub-container.title {
   height: calc(17% - 50px);
@@ -276,21 +282,21 @@ div.header {
   justify-content: space-between;
 }
 .svg--qelfin-beard {
-  margin-right: 0.3em;
-  position: relative;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  margin-right: 0.3em;
+  position: relative;
   width: 100%;
   height: 100%;
   background-image: url('../img/output--qelf-beard.svg');
 }
 .svg--qelfin-girl {
-  margin-left: 0.3em;
-  position: relative;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  margin-left: 0.3em;
+  position: relative;
   background-image: url('../img/output--qelf-girl.svg');
 }
 .cell.svg--output-stats {
@@ -331,11 +337,29 @@ div.header {
   height: 100%;
   opacity: 0.1;
 }
-@media screen and (min-width: 38em) {
+.brainy-banner {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../img/more-brainy.svg');
+  width: 47%;
+  height: 35%;
+}
+@media screen and (min-width: 770px) {
   .cell.large-screen.half {
     flex: 0 70%;
   }
   .grid > .cell.large-screen--quarter {
     flex: 0 0 25%;
+  }
+  .svg--qelfin-beard {
+    margin-right: 1em;
+  }
+  .svg--qelfin-girl {
+    margin-left: 1em;
+  }
+  .brainy-banner {
+    width: 30%;
+    height: 40%;
   }
 }
