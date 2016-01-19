@@ -40,24 +40,27 @@ div.header {
     height: 100%;
     width: 100%;
     background-color: transparent;
+    position: relative;
     .phone-svg {
       .background-image();
-      position: relative;
       width: 100%;
       height: 100%;
       background-image: url('../img/iphone.svg');
-      .product-ss {
-        //Hacky, but makes the screen shot fit exactly where the phone screen should be
-        height: 77%;
-        width: 63.5%;
-        position: absolute;
-        top: 22.6%;
-        left: 18.5%;
-        background-position: 50% 0;
-        background-size: cover;
-        background-repeat: none;
-        background-image: url('../img/ss2.png');
-      }
+    }
+    .svg-background {
+
+    }
+    .product-ss {
+      //Hacky, but makes the screen shot fit exactly where the phone screen should be
+      height: 77%;
+      width: 63.5%;
+      position: absolute;
+      top: 22.6%;
+      left: 18.5%;
+      background-position: 50% 0;
+      background-size: cover;
+      background-repeat: none;
+      background-image: url('../img/ss2.png');
     }
   }
 }
