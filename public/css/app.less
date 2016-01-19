@@ -205,7 +205,8 @@ div.header {
     margin: 0;
   }
   .cell.third {
-    .flex-basis(@basis: 33.33333%);
+    flex: 0 0 33.33333%;
+    -webkit-flex: 0 0 33.33333%
   }
 }
 
@@ -354,14 +355,14 @@ div.blocker {
     -webkit-flex: 0 0 25%;
     flex: 0 0 25%;
   }
+  .brainy-banner {
+    width: 30%;
+    height: 40%;
+  }
   .svg--qelfin-beard {
     margin-right: 1em;
   }
   .svg--qelfin-girl {
     margin-left: 1em;
-  }
-  .brainy-banner {
-    width: 30%;
-    height: 40%;
   }
 }
