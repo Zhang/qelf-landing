@@ -20,7 +20,7 @@ $('#signup').click(function() {
 
   $.ajax({
     type: 'POST',
-    url: 'http://qelf.co/',
+    url: 'http://qelf.herokuapp.com',
     data: data,
     dataType: 'json'
   });
