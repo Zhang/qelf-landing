@@ -14,10 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "4.13.3",
     "grunt": "0.4.5",
-    "load-grunt-tasks": "3.4.0",
     "grunt-contrib-less": "1.1.0",
-    "grunt-contrib-watch": "0.6.1"
+    "grunt-contrib-watch": "0.6.1",
+    "kerberos": "0.0.18",
+    "load-grunt-tasks": "3.4.0",
+    "mongodb": "2.1.4",
+    "mongoskin": "2.0.3"
   }
 }
