@@ -240,6 +240,7 @@ div.header {
 .section.vote {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex: 1;
   flex: 1;
   padding: 0;
   height: 80vh;
@@ -261,6 +262,7 @@ div.header {
   padding: 0;
 }
 .vote-divider {
+  -webkit-flex: 1;
   flex: 1;
   background-size: contain;
   background-repeat: no-repeat;
@@ -272,13 +274,16 @@ div.header {
   display: flex;
 }
 .grid .cell {
+  -webkit-flex: 1;
   flex: 1;
   margin: 0;
 }
 .grid .cell.third {
+  -webkit-flex: 0 0 33.33333%;
   flex: 0 0 33.33333%;
 }
 .cell.large-height {
+  -webkit-flex: 0 0 60vh;
   flex: 0 0 60vh;
 }
 .grid.vertical {
@@ -415,9 +420,11 @@ div.blocker {
 }
 @media screen and (min-width: 770px) {
   .cell.large-screen.half {
+    -webkit-flex: 0 70%;
     flex: 0 70%;
   }
   .grid > .cell.large-screen--quarter {
+    -webkit-flex: 0 0 25%;
     flex: 0 0 25%;
   }
   .svg--qelfin-beard {
