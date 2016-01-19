@@ -164,6 +164,7 @@ div.header {
 }
 .splash {
   height: 90%;
+  position: relative;
 }
 .splash .phone {
   height: 53%;
