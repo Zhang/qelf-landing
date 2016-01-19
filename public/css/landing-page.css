@@ -108,9 +108,7 @@ div.header {
 }
 .section {
   background-color: white;
-  height: 200px;
   position: relative;
-  padding: 20px 0;
   color: #505050;
 }
 .section.downloads {
@@ -179,7 +177,7 @@ div.header {
   border-bottom: 1px solid transparent;
 }
 .section-text {
-  margin-top: 10px;
+  margin: 10px 0;
 }
 .section-image {
   width: 270px;
@@ -202,8 +200,6 @@ div.header {
 .footer a:hover {
   cursor: pointer;
 }
-/*Default Ipad Screen*/
-/*Default Ipad Screen*/
 .splash {
   background: #947dd5;
   /* Old browsers */
@@ -345,6 +341,55 @@ div.header {
   background-image: url('../img/more-brainy.svg');
   width: 47%;
   height: 35%;
+}
+.btn-container {
+  width: 30%;
+  margin: 0 auto;
+}
+.signup-btn {
+  background-color: #947dd5;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+.signup-btn:hover {
+  cursor: pointer;
+  background-color: #7362A2;
+}
+#modal {
+  display: none;
+  position: absolute;
+  top: 30%;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+}
+#modal .modal-input {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #505050;
+  margin: 10px 0px;
+}
+#modal #signup {
+  float: right;
+  border: none;
+  background-color: #947dd5;
+  padding: 5px 15px;
+  border-radius: 3px;
+  color: white;
+}
+.alpha.section-text {
+  height: 10%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 }
 @media screen and (min-width: 770px) {
   .cell.large-screen.half {

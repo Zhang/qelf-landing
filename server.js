@@ -28,11 +28,13 @@ app.get('*', function(req, res) {
 app.post('/', urlencodedParser, function(req, res) {
   var email = req.body.email;
   var referred = req.body.referred;
+  var phone = req.body.phone;
 
   db.collection('alpha-users').insert(
     {
       email: email,
-      referred: referred
+      referred: referred,
+      phone: phone
     },
     function(err, result) {
       if (err) return res.status(500).send('An error has occured', err);

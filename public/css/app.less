@@ -61,9 +61,7 @@ div.header {
 }
 .section {
   background-color: white;
-  height: 200px;
   position: relative;
-  padding: 20px 0;
   color: @off-black;
 }
 .section.downloads {
@@ -101,68 +99,56 @@ div.header {
   height: 100%;
   position: relative;
 }
-//@media screen and (min-width : 320px) {
-  .app-title, .header, .sub-header {
-    width: 320px;
-    margin: 0 auto;
-    .flex-center();
+
+.app-title, .header, .sub-header {
+  width: 320px;
+  margin: 0 auto;
+  .flex-center();
+}
+.splash {
+  @splash-height: 90%;
+  @title-height: 17%;
+  @title-phone-gap: 20%;
+  height: @splash-height;
+  position: relative;
+  .phone {
+    height: 53%;
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    margin-left: calc(50% - 35%);
   }
-  .splash {
-    @splash-height: 90%;
-    @title-height: 17%;
-    @title-phone-gap: 20%;
-    height: @splash-height;
-    position: relative;
-    .phone {
-      height: 53%;
-      width: 70%;
-      position: absolute;
-      bottom: 0;
-      margin-left: calc(50% - 35%);
-    }
-    .sub-container.title {
-      height: calc(@title-height - 50px);
-      margin: 60px auto 0px auto;
-      border-bottom: 1px solid transparent;
-    }
+  .sub-container.title {
+    height: calc(@title-height - 50px);
+    margin: 60px auto 0px auto;
+    border-bottom: 1px solid transparent;
   }
-  .section-text {
-    margin-top: 10px;
+}
+.section-text {
+  margin: 10px 0;
+}
+.section-image {
+  width: 270px;
+  margin: 0 auto;
+  height: 20vh;
+  background-color: @off-black;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  .x-margin {
+    margin: 0 5px;
   }
-  .section-image {
-    width: 270px;
-    margin: 0 auto;
-    height: 20vh;
-    background-color: @off-black;
-  }
-  .footer {
-    padding: 20px;
-    text-align: center;
+  a {
+    text-decoration: none;
     color: white;
-    .x-margin {
-      margin: 0 5px;
-    }
-    a {
-      text-decoration: none;
-      color: white;
-      &:hover {
-        cursor: pointer;
-      }
+    &:hover {
+      cursor: pointer;
     }
   }
-//}
+}
 
-/*Default Ipad Screen*/
-// @media screen and (min-width: 768px) {
-//   .sub-container {
-//     display: inline-block;
-//   }
-//   .phone {
-//     float: left;
-//   }
-// }
-
-/*Default Ipad Screen*/
 .splash {
   background: #947dd5; /* Old browsers */
   background: -moz-linear-gradient(top, #947dd5 0%, #5839ae 98%); /* FF3.6-15 */
@@ -298,7 +284,50 @@ div.header {
   width: 47%;
   height: 35%;
 }
-
+.btn-container {
+  width: 30%;
+  margin: 0 auto;
+}
+.signup-btn {
+  background-color: #947dd5;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    background-color: #7362A2;
+  }
+}
+#modal {
+  display: none;
+  position: absolute;
+  top: 30%;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  .modal-input {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid @off-black;
+    margin: 10px 0px;
+  }
+  #signup {
+    float: right;
+    border: none;
+    background-color: #947dd5;
+    padding: 5px 15px;
+    border-radius: 3px;
+    color: white;
+  }
+}
+.alpha.section-text {
+  height: 10%;
+  .flex-center();
+}
 @media screen and (min-width: 770px) {
   .cell.large-screen.half {
     flex: 0 70%;

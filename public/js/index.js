@@ -12,10 +12,12 @@ $('#signup').click(function() {
 
   var data = {
     email: emailAddr,
-    referred: $('#referred').val()
+    referred: $('#referred').val(),
+    phone: $('#phone').val()
   };
 
   $('#email').val('');
+  $('#phone').val('');
   $('#referred').val('');
 
   $.ajax({
@@ -24,4 +26,9 @@ $('#signup').click(function() {
     data: data,
     dataType: 'json'
   });
+});
+
+$('#signup-btn').click(function() {
+  $('#modal').modal();
+  return false;
 });
