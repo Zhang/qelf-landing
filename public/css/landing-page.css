@@ -395,6 +395,12 @@ div.header {
 div.blocker {
   padding: 0;
 }
+.menu-header {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+}
 @media screen and (min-width: 770px) {
   .cell.large-screen.half {
     flex: 0 70%;
