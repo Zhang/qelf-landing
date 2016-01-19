@@ -152,8 +152,8 @@ div.header {
   height: 100%;
   background-image: url('../img/qelfin-top.svg');
   position: relative;
-  left: 5vh;
-  top: -5vh;
+  left: 15%;
+  top: -30%;
 }
 .splash-sub {
   height: 100%;
