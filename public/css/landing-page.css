@@ -163,7 +163,7 @@ div.header {
 .splash {
   height: 90%;
   position: relative;
-  min-height: 440px;
+  min-height: 44  0px;
 }
 .splash .phone {
   height: 53%;
@@ -365,7 +365,7 @@ div.header {
   top: 30%;
   width: 300px;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -180px;
 }
 #modal .modal-input {
   display: block;
