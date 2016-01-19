@@ -8,10 +8,6 @@ $('#signup-btn').click(function() {
       return re.test(email);
     }
 
-    if (!validateEmail(emailAddr)) {
-      return;
-    }
-
     var data = {
       email: emailAddr,
       referred: $('#referred').val(),
