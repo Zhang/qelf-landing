@@ -15,6 +15,8 @@
 .flex-center {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
@@ -68,6 +70,8 @@ body textarea {
 .app-title {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
@@ -167,6 +171,8 @@ div.header {
   margin: 0 auto;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
@@ -240,8 +246,8 @@ div.header {
 .section.vote {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex: 1;
-  flex: 1;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
   padding: 0;
   height: 80vh;
 }
@@ -262,8 +268,8 @@ div.header {
   padding: 0;
 }
 .vote-divider {
-  -webkit-flex: 1;
-  flex: 1;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -274,26 +280,28 @@ div.header {
   display: flex;
 }
 .grid .cell {
-  -webkit-flex: 1;
-  flex: 1;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
   margin: 0;
 }
 .grid .cell.third {
-  -webkit-flex: 0 0 33.33333%;
-  flex: 0 0 33.33333%;
+  flex-basis: 33.33333%;
+  -webkit-flex-basis: 33.33333%;
 }
 .cell.large-height {
-  -webkit-flex: 0 0 60vh;
-  flex: 0 0 60vh;
+  flex-basis: 60vh;
+  -webkit-flex-basis: 60vh;
 }
 .grid.vertical {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
 .grid.justify-center {
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .grid.justify-apart {
+  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 .svg--qelfin-beard {
@@ -315,8 +323,8 @@ div.header {
   background-image: url('../img/output--qelf-girl.svg');
 }
 .cell.svg--output-stats {
-  flex: 0 0 60vw;
-  -webkit-flex: 0 0 60vw;
+  flex-basis: 60vw;
+  -webkit-flex-basis: 60vw;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
@@ -371,6 +379,7 @@ div.header {
   text-align: center;
   padding: 10px;
   border-radius: 5px;
+  font-size: 1.7em;
   color: white;
   font-weight: bold;
 }
@@ -406,6 +415,8 @@ div.header {
   height: 10%;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;

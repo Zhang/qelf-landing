@@ -47,9 +47,6 @@ div.header {
       height: 100%;
       background-image: url('../img/iphone.svg');
     }
-    .svg-background {
-
-    }
     .product-ss {
       //Hacky, but makes the screen shot fit exactly where the phone screen should be
       height: 77%;
@@ -173,8 +170,7 @@ div.header {
 
 .section.vote {
   .flex();
-  -webkit-flex: 1;
-  flex: 1;
+  .flex-grow(@growth: 1);
   padding: 0;
   height: 80vh;
 }
@@ -304,6 +300,7 @@ div.header {
   text-align: center;
   padding: 10px;
   border-radius: 5px;
+  font-size: 1.7em;
   color: white;
   font-weight: bold;
   &:hover {

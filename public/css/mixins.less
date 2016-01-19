@@ -7,6 +7,8 @@
 }
 .flex-center {
   .flex();
+  -webkit-flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
@@ -30,8 +32,8 @@
   -webkit-flex-grow: @growth;
 }
 .flex-basis(@basis: 0) {
-  flex-basis: @growth;
-  -webkit-flex-basis: @growth;
+  flex-basis: @basis;
+  -webkit-flex-basis: @basis;
 }
 .background-image {
   background-size: contain;
@@ -54,5 +56,7 @@
   input[type='text'],
   input[type='number'],
   textarea {
-  font-size: 16px;
+    font-size: 16px;
+  }
 }
+
