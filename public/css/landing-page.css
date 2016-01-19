@@ -371,15 +371,15 @@ div.header {
   height: 35%;
 }
 .btn-container {
-  width: 55%;
+  width: 65%;
   margin: 0 auto;
 }
 .signup-btn {
   background-color: #947dd5;
   text-align: center;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.7em;
+  padding: 15px 20px;
+  border-radius: 3px;
+  font-size: 1.5em;
   color: white;
   font-weight: bold;
 }
