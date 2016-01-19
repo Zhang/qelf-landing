@@ -152,7 +152,7 @@ div.header {
   height: 100%;
   background-image: url('../img/qelfin-top.svg');
   position: relative;
-  left: 15%;
+  left: 17%;
   top: -25%;
 }
 .splash-sub {
@@ -174,7 +174,7 @@ div.header {
 .splash {
   height: 90%;
   position: relative;
-  min-height: 44  0px;
+  min-height: 44 0px;
 }
 .splash .phone {
   height: 53%;
