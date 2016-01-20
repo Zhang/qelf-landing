@@ -47,18 +47,6 @@ div.header {
       height: 100%;
       background-image: url('../img/iphone.svg');
     }
-    .product-ss {
-      //Hacky, but makes the screen shot fit exactly where the phone screen should be
-      height: 77%;
-      width: 63.5%;
-      position: absolute;
-      top: 22.6%;
-      left: 18.5%;
-      background-position: 50% 0;
-      background-size: cover;
-      background-repeat: none;
-      background-image: url('../img/ss2.png');
-    }
   }
 }
 .section {
@@ -124,9 +112,14 @@ div.header {
   }
   .sub-container.title {
     height: calc(@title-height - 10%);
-    margin: 10% auto 0px auto;
+    margin: 0 auto 0px auto;
     border-bottom: 1px solid transparent;
   }
+}
+
+.top-spacer {
+  height: 10%;
+  max-height: 100px;
 }
 .section-text {
   margin: 10px 0;
