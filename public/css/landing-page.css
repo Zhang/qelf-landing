@@ -440,6 +440,46 @@ div.header {
   -webkit-justify-content: center;
   -webkit-align-items: center;
 }
+.alpha-with-text.section-text {
+  height: 20%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.alpha-with-text.section-text .btn-container {
+  flex-grow: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+}
+.alpha-with-text.section-text .btn-container .signup-btn {
+  width: 100%;
+}
+.alpha-with-text.section-text .quote {
+  flex-grow: 2;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  text-align: center;
+  font-size: 2em;
+}
 div.blocker {
   padding: 0;
 }

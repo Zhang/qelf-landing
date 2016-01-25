@@ -69,8 +69,8 @@ div.header {
   position: absolute;
   top: 0;
   right: 0;
-  height: 22vh;
-  width: 48vw;
+  height: 300px;
+  width: 150px;
   background-color: transparent;
   overflow: hidden;
 
@@ -81,8 +81,8 @@ div.header {
     height: 100%;
     background-image: url('../img/qelfin-top.svg');
     position: relative;
-    left: 17%;
-    top: -25%;
+    left: 30px;
+    top: -115px;
   }
 }
 
@@ -331,6 +331,24 @@ div.header {
   height: 10%;
   .flex-center();
 }
+.alpha-with-text.section-text {
+  height: 20%;
+  .flex-column();
+  .align-center();
+  .btn-container {
+    flex-grow: 1;
+    .flex-center();
+    .signup-btn {
+      width: 100%;
+    }
+  }
+  .quote {
+    flex-grow: 2;
+    .flex-center();
+    text-align: center;
+    font-size: 2em;
+  }
+}
 div.blocker {
   padding: 0;
 }
@@ -359,4 +377,18 @@ div.blocker {
   .svg--qelfin-girl {
     margin-left: 1em;
   }
+  .qelfin-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 500px;
+    width: 250px;
+    background-color: transparent;
+    overflow: hidden;
+  }
+  .qelfin-top .qelfin-svg {
+    left: 45px;
+    top: -192px;
+  }
+
 }
