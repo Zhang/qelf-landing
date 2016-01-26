@@ -10,13 +10,13 @@ $('#signup-btn').click(function() {
 
     var data = {
       email: emailAddr,
-      referred: $('#referred').val(),
+      //referred: $('#referred').val(),
       phone: $('#phone').val()
     };
 
     $('#email').val('');
     $('#phone').val('');
-    $('#referred').val('');
+    //$('#referred').val('');
 
     $.ajax({
       type: 'POST',

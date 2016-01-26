@@ -206,20 +206,25 @@ div.header {
   height: 20vh;
   background-color: #505050;
 }
-.footer {
+.footer,
+.footer-2 {
   padding: 20px;
   text-align: center;
-  color: white;
 }
-.footer .x-margin {
+.footer .x-margin,
+.footer-2 .x-margin {
   margin: 0 5px;
 }
-.footer a {
+.footer a,
+.footer-2 a {
   text-decoration: none;
-  color: white;
 }
-.footer a:hover {
+.footer a:hover,
+.footer-2 a:hover {
   cursor: pointer;
+}
+.footer {
+  color: white;
 }
 .splash {
   background: #947dd5;
@@ -245,13 +250,31 @@ div.header {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5839ae', endColorstr='#947dd5', GradientType=0);
   /* IE6-9 */
 }
+.footer-2 {
+  color: #3E18BD;
+  background-color: white;
+}
 .section.vote {
   display: -webkit-flex;
   display: flex;
+  height: 80vh;
+}
+.section.vote,
+.section.vote-2 {
   flex-grow: 1;
   -webkit-flex-grow: 1;
   padding: 0;
-  height: 80vh;
+}
+.section.vote-2 {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  height: 110vh;
 }
 .layer-container {
   position: relative;
@@ -332,19 +355,6 @@ div.header {
   margin-left: 0.3em;
   position: relative;
   background-image: url('../img/output--qelf-girl.svg');
-}
-.cell.svg--output-stats {
-  flex-basis: 60vw;
-  -webkit-flex-basis: 60vw;
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  -moz-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-  background-size: 100% 100%;
-  background-image: url('../img/output--stats.svg');
-  box-shadow: 0 20px rgab(0, 0, 0, 0.8);
 }
 .square {
   padding-bottom: 100%;
@@ -479,6 +489,7 @@ div.header {
   -webkit-align-items: center;
   text-align: center;
   font-size: 2em;
+  margin: 0 10px;
 }
 div.blocker {
   padding: 0;
@@ -488,6 +499,53 @@ div.blocker {
   font-size: 16px;
   font-weight: bold;
   padding: 8px;
+}
+.cell.svg--output-stats {
+  flex-basis: 50vw;
+  -webkit-flex-basis: 50vw;
+  flex-grow: 2;
+  -webkit-flex-grow: 2;
+  position: relative;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-image: url('../img/output--stats.svg');
+  box-shadow: 0 20px rgab(0, 0, 0, 0.8);
+}
+.description {
+  flex-basis: 60vw;
+  -webkit-flex-basis: 60vw;
+  flex-grow: 5;
+  -webkit-flex-grow: 5;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  align-items: center;
+  -webkit-align-items: center;
+  padding: 0 4em 2em 4em;
+}
+.description .section-text {
+  color: white;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  width: 100%;
+}
+.description .section-text .header-2 {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+.description .section-text .sub-header-2 {
+  font-size: 1.8em;
 }
 @media screen and (min-width: 770px) {
   .cell.large-screen.half {
@@ -520,5 +578,47 @@ div.blocker {
   .qelfin-top .qelfin-svg {
     left: 45px;
     top: -192px;
+  }
+  .cell.svg--output-stats {
+    flex-basis: 60vw;
+    -webkit-flex-basis: 60vw;
+  }
+  .description {
+    height: calc(100% - 14em);
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    padding: 7em 5em;
+    text-align: left;
+  }
+  .description .section-text div.header-2 {
+    font-size: 3em;
+  }
+  .description .section-text div.sub-header-2 {
+    font-size: 1.8em;
+  }
+  .section.vote-2 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+  }
+  .section.vote-2 .svg--output-stats {
+    height: 100%;
+  }
+  .section.vote-2 {
+    height: 80vh;
+  }
+  .cell.svg--output-stats {
+    flex-basis: 60vw;
+    -webkit-flex-basis: 60vw;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+  }
+  .header {
+    width: 370px;
   }
 }
